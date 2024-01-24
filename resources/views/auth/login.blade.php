@@ -9,15 +9,28 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <title>RDI-KPRU</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
-<body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Login') }}</div>
+<body
+    style="background-image: url({{ asset('img/blur-background05.jpg') }});
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    opacity: 90%
+">
 
+    <div class=" container">
+        <div class="d-flex justify-content-center vh-100 align-items-center">
+            <div class="col-lg-12">
+                <div class="card">
+            
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
